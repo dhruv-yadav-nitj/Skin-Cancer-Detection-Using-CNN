@@ -1,2 +1,2 @@
-# Skin-Cancer-Prediction--System
+# Skin-Cancer-Prediction-System
  
