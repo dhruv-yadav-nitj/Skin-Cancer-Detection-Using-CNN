@@ -1,4 +1,3 @@
-readme_content = """
 # Skin Cancer Detection Using CNN
 
 This project aims to detect melanoma, a type of skin cancer, using Convolutional Neural Networks (CNN). The model is trained on the HAM10000 dataset, which contains images of localized skin cells. It predicts whether a tumor in the input image is benign or malignant with an accuracy of approximately 90%.
