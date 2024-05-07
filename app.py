@@ -1,5 +1,6 @@
 import streamlit as st
 import numpy as np
+import pandas as pd
 from PIL import Image
 from tensorflow.keras.models import load_model
 from tensorflow.keras.preprocessing.image import img_to_array
@@ -34,6 +35,9 @@ if uploaded is not None:
     confidence, pred_class_name = ans[0][pred_class], classes[pred_class]
 
     confidence_percentage = round(confidence * 100, 2)
-    st.write(f"Predicted Class: {pred_class_name}, Confidence: {confidence_percentage}%")
-
-    
+    data = {
+        'Predicted Class': [pred_class_name],
+        'Confidence (%)': [confidence_percentage]
+    }
+    df = pd.DataFrame(data)
+    st.write(df)
