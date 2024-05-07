@@ -6,12 +6,7 @@ from tensorflow.keras.preprocessing.image import img_to_array
 
 from keras.layers import Softmax
 
-# Define custom objects with Softmax activation function
-custom_objects = {'Softmax': Softmax}
-
-# Load the model with custom objects
-model = load_model('modelv1.h5', custom_objects=custom_objects)
-
+model = load_model('model.h5')
 
 st.title("Skin Cancer Prediction System")
 
@@ -34,4 +29,9 @@ if uploaded is not None:
     inp = preprocess_image(image)
     ans = prediction(inp)
     classes = ['Benign', 'Malignant']
-    st.write(ans); st.write (classes[np.argmax(ans)])
+    
+
+    pred_class = np.argmax(ans)
+    confidence, pred_class_name = np[pred_class], classes[pred_class]
+
+    st.write(f"Predicted Class: {pred_class_name}, Confidence: {confidence * 100:.2f}%")
