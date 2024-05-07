@@ -29,9 +29,9 @@ if uploaded is not None:
     inp = preprocess_image(image)
     ans = prediction(inp)
     classes = ['Benign', 'Malignant']
-    
 
     pred_class = np.argmax(ans)
-    confidence, pred_class_name = ans[pred_class]*100, classes[pred_class]
+    confidence, pred_class_name = ans[pred_class], classes[pred_class]
 
-    st.write(pred_class_name)
+    confidence_percentage = confidence * 100
+    st.write(f"Predicted Class: {pred_class_name}, Confidence: {confidence_percentage:.2f}%")
