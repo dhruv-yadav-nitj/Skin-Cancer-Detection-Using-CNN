@@ -33,5 +33,7 @@ if uploaded is not None:
     pred_class = np.argmax(ans)
     confidence, pred_class_name = ans[0][pred_class], classes[pred_class]
 
-    confidence_percentage = confidence * 100
-    st.write(pred_class_name); st.write(confidence_percentage)
+    confidence_percentage = round(confidence * 100, 2)
+    st.write(pred_class_name); st.write(confidence_percentage, "%")
+
+    
