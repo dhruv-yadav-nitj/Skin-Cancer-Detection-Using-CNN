@@ -34,4 +34,4 @@ if uploaded is not None:
     confidence, pred_class_name = ans[pred_class], classes[pred_class]
 
     confidence_percentage = confidence * 100
-    st.write(f"Predicted Class: {pred_class_name}, Confidence: {confidence_percentage:.2f}%")
+    st.write(pred_class_name); st.write(confidence_percentage)
