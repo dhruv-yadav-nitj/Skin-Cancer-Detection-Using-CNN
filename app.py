@@ -31,7 +31,7 @@ if uploaded is not None:
     classes = ['Benign', 'Malignant']
 
     pred_class = np.argmax(ans)
-    confidence, pred_class_name = ans[pred_class], classes[pred_class]
+    confidence, pred_class_name = ans[0][pred_class], classes[pred_class]
 
     confidence_percentage = confidence * 100
     st.write(pred_class_name); st.write(confidence_percentage)
