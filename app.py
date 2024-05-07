@@ -34,4 +34,4 @@ if uploaded is not None:
     pred_class = np.argmax(ans)
     confidence, pred_class_name = ans[pred_class]*100, classes[pred_class]
 
-    st.write(f"Predicted Class: {pred_class_name}, Confidence: {confidence * 100:.2f}%")
+    st.write(pred_class_name)
