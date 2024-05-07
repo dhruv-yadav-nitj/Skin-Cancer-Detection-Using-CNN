@@ -12,7 +12,7 @@ if uploaded is not None:
     image = Image.open(uploaded)
     st.image(image, caption="Input Cell Image", width=200)
 
-    model = load_model('model.h5')
+    model = load_model('modelv1.h5')
 
     def preprocess_image(uploaded_image):
         resized_image = uploaded_image.resize((256, 256))
