@@ -7,7 +7,7 @@ from tensorflow.keras.preprocessing.image import img_to_array
 
 from keras.layers import Softmax
 
-model = load_model('model.h5')
+model = load_model('model.keras')
 
 st.title("Skin Cancer Prediction System")
 
@@ -17,15 +17,18 @@ if uploaded is not None:
     image = Image.open(uploaded)
     st.image(image, caption="Input Cell Image", width=200)
 
+
     def preprocess_image(uploaded_image):
         resized_image = uploaded_image.resize((256, 256))
         image_array = img_to_array(resized_image)
         image_array /= 255.
         return image_array
 
+
     def prediction(image_array):
         pred = model.predict(np.expand_dims(image_array, axis=0))
         return pred
+
 
     inp = preprocess_image(image)
     ans = prediction(inp)
