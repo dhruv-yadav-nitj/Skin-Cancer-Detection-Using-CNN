@@ -17,4 +17,4 @@ The Convolutional Neural Network (CNN) architecture used for this project consis
 ![confusion-matrix](https://github.com/user-attachments/assets/c8c35983-333a-42c7-b6f6-dec633a66bdc)
 
 ## Deployment
-The project is deployed using Streamlit, which is a very famous and widely used Python Framework for web apps. [Live](https://karanveer-detects.streamlit.app/)
+The project is deployed using Streamlit here: [Live](https://karanveer-detects.streamlit.app/)
