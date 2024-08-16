@@ -13,5 +13,8 @@ The HAM10000 dataset consists of 10000 dermatoscopic images. Each image is label
 ## Model Architecture
 The Convolutional Neural Network (CNN) architecture used for this project consists of multiple convolutional layers followed by max-pooling layers for feature extraction. The extracted features are then passed through fully connected layers for classification. The model is trained using the HAM10000 dataset with appropriate data augmentation techniques to improve generalization.
 
+## Confusion Matrix
+![confusion-matrix](https://github.com/user-attachments/assets/c8c35983-333a-42c7-b6f6-dec633a66bdc)
+
 ## Deployment
 The project is deployed using Streamlit, which is a very famous and widely used Python Framework for web apps. [Live](https://karanveer-detects.streamlit.app/)
